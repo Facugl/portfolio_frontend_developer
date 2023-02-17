@@ -2,8 +2,8 @@ import { Container, TitleSection, Button, Link } from "../../globalStyles";
 import { useInView } from "react-intersection-observer";
 import { techStack } from "../../data/TechStackData";
 import { contactData } from "../../data/ContactData";
-import avatar from "../../../public/assets/images/avatar.png";
-import cv from "../../../public/assets/FacundoLuna_FrontEndDeveloper_CV.pdf";
+import avatar from "/assets/images/avatar.png";
+import cv from "/assets/FacundoLuna_FrontEnd-Developer_CV.pdf";
 import { LinksSocialMedia } from "../../common/LinkSocialMedia/index";
 import { SkillItem } from "../../components/Skill/index";
 import { Section } from "../../common/Section";
@@ -66,12 +66,12 @@ export const About = () => {
             transition={{ duration: 0.5 }}
           >
             <Paragraph>
-              My name is Facundo, passionate about science and technology. As a
-              Front-End Developer I like to create solutions with the best user
-              experiences through attractive and accessible interfaces.
-              <br />I am currently looking for my first job opportunity in IT,
-              meanwhile I continue learning and building projects. In my free
-              time I like to play chess, soccer and watch anime. 🐱‍👤
+              Determined and productive web developer with a passion for
+              creative solutions. Proficient in HTML, CSS and JavaScript.
+              Dedicated to learning additional technologies and coding languages
+              (currently enrolled in a Java course). Looking for an entry-level
+              position at a great company to be a hard-working asset in any
+              team, to learn, grow and develop long-term. 🐱‍👤
             </Paragraph>
             <ButtonsWrapper>
               <SocialWrapper>
@@ -85,7 +85,9 @@ export const About = () => {
                 href={cv}
                 download="FacundoLuna_FrontEnd-Developer_CV.pdf"
               >
-                <ButtonDownloadCV type="button">Download CV</ButtonDownloadCV>
+                <ButtonDownloadCV type="button">
+                  Download Resume
+                </ButtonDownloadCV>
               </Link>
             </ButtonsWrapper>
           </InfoContainer>

@@ -19,9 +19,9 @@ export const ImageContainer = styled(motion.div)`
   height: auto;
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: center;
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 768px) {
     width: 100%;
   }
 `;
@@ -161,7 +161,7 @@ export const Img = styled.img`
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   transition: 0.5s;
   pointer-events: none;
   z-index: 3;
@@ -174,6 +174,10 @@ export const InfoContainer = styled(motion.div)`
     display: flex;
     flex-direction: column-reverse;
     width: 100%;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 90%;
   }
 `;
 
