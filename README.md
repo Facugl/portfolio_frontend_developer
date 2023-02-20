@@ -19,12 +19,6 @@ Primera versión de mi portfolio como Front-End Developer. Aún quedan detalles 
 
 ---
 
-## Vista previa del proyecto
-
-![Preview](./public/assets/gif (1).gif)
-
----
-
 ## ✒️ Autor
 
 **Facundo Luna**
