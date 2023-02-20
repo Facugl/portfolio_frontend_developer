@@ -1,6 +1,5 @@
-import { motion } from "framer-motion";
 import styled from "styled-components";
-motion;
+import { motion } from "framer-motion";
 
 export const TextWrapper = styled.div`
   display: flex;
@@ -12,6 +11,8 @@ export const TextWrapper = styled.div`
 export const Paragraph = styled(motion.p)`
   text-align: center;
   margin-top: 1rem;
+  position: relative;
+  z-index: 9;
 `;
 
 export const ProjectsWrapper = styled.div`

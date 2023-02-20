@@ -169,15 +169,19 @@ export const Img = styled.img`
 
 export const InfoContainer = styled(motion.div)`
   width: 55%;
+  position: relative;
+  z-index: 9;
 
-  @media screen and (max-width: 480px) {
+  /* @media screen and (max-width: 480px) {
     display: flex;
     flex-direction: column-reverse;
     width: 100%;
-  }
+  } */
 
   @media screen and (max-width: 768px) {
-    width: 90%;
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
   }
 `;
 

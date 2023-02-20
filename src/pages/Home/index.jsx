@@ -30,14 +30,14 @@ export const Home = () => {
           initial={{ y: -50, opacity: 0 }}
           // whileInView={{ x: 0, opacity: 1 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.1 }}
+          transition={{ duration: 0.5 }}
         >
           Hi there 👋, I'm Facundo.
         </H1>
         <TextWrapper
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.1 }}
+          transition={{ duration: 0.5 }}
         >
           <Span>I'm a&nbsp;</Span>
           <Typewriter
@@ -58,7 +58,7 @@ export const Home = () => {
         <motion.div
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.1 }}
+          transition={{ duration: 0.5 }}
         >
           <Link to="projects">
             <Button type="button">

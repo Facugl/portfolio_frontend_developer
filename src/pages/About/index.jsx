@@ -32,7 +32,8 @@ export const About = () => {
       <Container>
         <TitleSection
           initial={{ opacity: 0 }}
-          whileInView={{ y: [-40, 0], opacity: 1 }}
+          whileInView={{ y: [-50, 0], opacity: 1 }}
+          transition={{ duration: 0.5 }}
         >
           About
         </TitleSection>
@@ -40,7 +41,7 @@ export const About = () => {
           <ImageContainer
             initial={{ opacity: 0 }}
             whileInView={{ y: [-50, 0], opacity: 1 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
           >
             <AvatarWrapper>
               <AvatarImg>
@@ -63,7 +64,7 @@ export const About = () => {
           <InfoContainer
             initial={{ opacity: 0 }}
             whileInView={{ y: [-50, 0], opacity: 1 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
           >
             <Paragraph>
               Determined and productive web developer with a passion for
@@ -95,7 +96,7 @@ export const About = () => {
         <SkillWrapper
           initial={{ opacity: 0 }}
           whileInView={{ y: [-50, 0], opacity: 1 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
         >
           <Column>
             {techStack?.slice(0, 3).map((skill) => (

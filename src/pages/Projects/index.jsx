@@ -15,13 +15,15 @@ export const Projects = () => {
       <Container>
         <TitleSection
           initial={{ opacity: 0 }}
-          whileInView={{ y: [-40, 0], opacity: 1 }}
+          whileInView={{ y: [-50, 0], opacity: 1 }}
+          transition={{ duration: 0.5 }}
         >
           Projects
         </TitleSection>
         <Paragraph
           initial={{ opacity: 0 }}
-          whileInView={{ y: [-40, 0], opacity: 1 }}
+          whileInView={{ y: [-50, 0], opacity: 1 }}
+          transition={{ duration: 0.5 }}
         >
           These are some of my latest works.
         </Paragraph>
