@@ -1,8 +1,9 @@
-import { Container, TitleSection } from "../../globalStyles";
+import { Container } from "../../globalStyles";
 import { Paragraph, ProjectsWrapper } from "./styles";
 import { useInView } from "react-intersection-observer";
 import { Section } from "../../common/Section";
 import { Project } from "../../components/Project";
+import { TitleSection } from "../../common/TitleSection";
 import projectsData from "../../data/ProjectsData";
 
 export const Projects = () => {

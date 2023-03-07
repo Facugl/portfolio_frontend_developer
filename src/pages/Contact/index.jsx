@@ -1,10 +1,11 @@
 import { Paragraph } from "./styles";
-import { Container, TitleSection } from "../../globalStyles";
+import { Container } from "../../globalStyles";
 import { motion } from "framer-motion";
 import { Section } from "../../common/Section";
 import { useInView } from "react-intersection-observer";
 import { MyForm } from "../../components/Form";
 import { ToastContainer } from "react-toastify";
+import { TitleSection } from "../../common/TitleSection";
 
 export const Contact = () => {
   const { ref, inView } = useInView({

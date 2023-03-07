@@ -1,6 +1,8 @@
 import styled from "styled-components";
-import { Button, Link, violetColor, darkAlphaColor } from "../../globalStyles";
+import { violetColor, darkAlphaColor } from "../../globalStyles";
 import { motion } from "framer-motion";
+import { Button } from "../../common/Button";
+import { Link } from "../../common/Link";
 
 export const ProjectContainer = styled(motion.div)`
   width: 100%;
@@ -23,7 +25,6 @@ export const ProjectImage = styled(motion.div)`
   img {
     width: 85%;
     height: 80%;
-    // object-fit: contain;
   }
 `;
 

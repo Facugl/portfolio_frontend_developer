@@ -1,4 +1,4 @@
-import { Container, TitleSection, Button, Link } from "../../globalStyles";
+import { Container } from "../../globalStyles";
 import { useInView } from "react-intersection-observer";
 import { techStack } from "../../data/TechStackData";
 import { contactData } from "../../data/ContactData";
@@ -7,6 +7,7 @@ import cv from "/assets/FacundoLuna_FrontEnd-Developer_CV.pdf";
 import { LinksSocialMedia } from "../../common/LinkSocialMedia/index";
 import { SkillItem } from "../../components/Skill/index";
 import { Section } from "../../common/Section";
+import { TitleSection } from "../../common/TitleSection";
 import {
   AvatarImg,
   AvatarWrapper,
@@ -21,6 +22,7 @@ import {
   SkillWrapper,
   SocialWrapper,
 } from "./styles";
+import { Link } from "../../common/Link";
 
 export const About = () => {
   const { ref, inView } = useInView({

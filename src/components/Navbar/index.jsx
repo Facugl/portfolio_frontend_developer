@@ -7,7 +7,6 @@ const Navbar = ({ hide }) => {
   const [show, setShow] = useState(false);
 
   return (
-    // <Container hide={hide}>
     <Nav hide={hide}>
       {!hide && (
         <NavMenu hide={hide} show={show}>
@@ -29,7 +28,6 @@ const Navbar = ({ hide }) => {
         </NavMenu>
       )}
     </Nav>
-    // </Container>
   );
 };
 

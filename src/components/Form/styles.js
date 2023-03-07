@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import { grayColor, primaryColor, Button } from "../../globalStyles";
+import { grayColor, primaryColor } from "../../globalStyles";
 import { Form, Field } from "formik";
+import { Button } from "../../common/Button";
 
 export const Paragraph = styled.p`
   margin-top: 1rem;

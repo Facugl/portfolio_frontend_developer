@@ -1,6 +1,7 @@
 import styled from "styled-components";
-import { Button, greenColor, primaryColor } from "../../globalStyles";
+import { greenColor, primaryColor } from "../../globalStyles";
 import { motion } from "framer-motion";
+import { Button } from "../../common/Button";
 
 export const ContentWrapper = styled.div`
   display: flex;
@@ -171,12 +172,6 @@ export const InfoContainer = styled(motion.div)`
   width: 55%;
   position: relative;
   z-index: 9;
-
-  /* @media screen and (max-width: 480px) {
-    display: flex;
-    flex-direction: column-reverse;
-    width: 100%;
-  } */
 
   @media screen and (max-width: 768px) {
     display: flex;

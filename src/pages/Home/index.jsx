@@ -2,7 +2,6 @@ import { MdArrowDownward } from "react-icons/md";
 import Navbar from "../../components/Navbar";
 import { useInView } from "react-intersection-observer";
 import Typewriter from "typewriter-effect";
-import { Button } from "../../globalStyles";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 import {
@@ -14,6 +13,7 @@ import {
   HeroContainer,
   Span,
 } from "./styles";
+import { Button } from "../../common/Button";
 
 export const Home = () => {
   const { ref, inView } = useInView({
@@ -28,7 +28,6 @@ export const Home = () => {
       <HeroContainer>
         <H1
           initial={{ y: -50, opacity: 0 }}
-          // whileInView={{ x: 0, opacity: 1 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
