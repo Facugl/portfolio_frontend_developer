@@ -1,0 +1,103 @@
+import {
+  css,
+  figma,
+  git,
+  html,
+  javascript,
+  material,
+  react,
+  redux,
+  sass,
+  typescript,
+  java,
+  springBoot,
+  docker,
+  mySql,
+} from "./LinksData";
+
+export const techStack = [
+  {
+    id: 1,
+    name: "HTML",
+    url: html,
+    color: "#E34c26",
+  },
+  {
+    id: 2,
+    name: "CSS",
+    url: css,
+    color: "#563D7C",
+  },
+  {
+    id: 3,
+    name: "JavaScript",
+    url: javascript,
+    color: "#F1E05A",
+  },
+  {
+    id: 4,
+    name: "React",
+    url: react,
+    color: "#61DAFB",
+  },
+  {
+    id: 5,
+    name: "Sass",
+    url: sass,
+    color: "#C6538C",
+  },
+  {
+    id: 6,
+    name: "TypeScript",
+    url: typescript,
+    color: "#3178C6",
+  },
+  {
+    id: 7,
+    name: "Git",
+    url: git,
+    color: "#F34F29",
+  },
+  {
+    id: 8,
+    name: "Figma",
+    url: figma,
+    color: "#FFA462, #A259FF, #0ACF83",
+  },
+  {
+    id: 9,
+    name: "Redux",
+    url: redux,
+    color: "#764ABC",
+  },
+  {
+    id: 10,
+    name: "Material-UI",
+    url: material,
+    color: "#0081CB",
+  },
+{
+    id: 11,
+    name: "Java",
+    url: java,
+    color: "#B07219",
+  },
+  {
+    id: 12,
+    name: "Spring Boot",
+    url: springBoot,
+    color: "#6DB33F",
+  },
+  {
+    id: 13,
+    name: "Docker",
+    url: docker,
+    color: "#0DB7ED",
+  },
+  {
+    id: 14,
+    name: "MySQL",
+    url: mySql,
+    color: "#00758F",
+  },
+];
