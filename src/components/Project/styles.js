@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { violetColor, darkAlphaColor } from "../../globalStyles";
+import { darkAlphaColor } from "../../globalStyles";
 import { motion } from "framer-motion";
 import { Button } from "../../common/Button";
 import { Link } from "../../common/Link";
