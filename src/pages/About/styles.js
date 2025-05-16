@@ -126,13 +126,6 @@ export const AvatarImg = styled.div`
   }
 
   a {
-    position: relative;
-    margin-top: 10px;
-    padding: 10px 20px;
-    background: #fff;
-    color: #070a1c;
-    border-radius: 25px;
-    font-weight: 500;
     font-size: 1.15em;
     text-transform: uppercase;
     letter-spacing: 0.05em;
