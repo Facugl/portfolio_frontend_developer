@@ -32,6 +32,6 @@ export const ProjectsWrapper = styled.div`
   }
 
   @media screen and (max-width: 400px) {
-    margin: 3.5rem 0;
+    margin: 1.5rem 0;
   }
 `;

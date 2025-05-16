@@ -70,7 +70,7 @@ export const Home = () => {
             to="projects"
             smooth={true}
             duration={500}
-            offset={-80}
+            offset={-40}
           >
             <Button type="button">
               Discovery my work

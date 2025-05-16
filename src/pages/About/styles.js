@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { greenColor, primaryColor } from "../../globalStyles";
+import { greenColor } from "../../globalStyles";
 import { motion } from "framer-motion";
 import { Button } from "../../common/Button";
 
@@ -120,20 +120,32 @@ export const AvatarImg = styled.div`
     color: #fff;
     font-weight: 600;
 
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 768px) {
       font-size: 1em;
     }
   }
 
   a {
-    font-size: 1.15em;
+    position: relative;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #fff;
+    color: #070a1c;
+    border-radius: 25px;
+    font-weight: 500;
+    font-size: 1.25em;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     text-decoration: none;
     transition: 0.5s;
 
-    @media screen and (max-width: 480px) {
-      font-size: 1em;
+    &:hover {
+      letter-spacing: 0.2em;
+    }
+
+    @media screen and (max-width: 768px) {
+      font-size: .7em;
+      padding: 5px 10px;
     }
   }
 `;

@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-import { motion } from "framer-motion";
->>>>>>> 6648ab05865f7e715763ef8c7224d02afd10af2d
 import {
   ProjectContainer,
   ProjectDesc,

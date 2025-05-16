@@ -9,6 +9,14 @@ export const ProjectContainer = styled(motion.div)`
   height: 40vw;
   position: relative;
   z-index: 9;
+
+  @media screen and (max-width: 480px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height:auto;
+    gap: 20px;
+  }
 `;
 
 export const ProjectImage = styled(motion.div)`
@@ -25,6 +33,14 @@ export const ProjectImage = styled(motion.div)`
   img {
     width: 85%;
     height: 80%;
+  }
+
+  @media screen and (max-width: 480px) {
+    height: 70vw;
+    position: static;
+    transform: none;
+    width: 100%;
+    max-width: 300px;
   }
 `;
 
@@ -53,6 +69,10 @@ export const ProjectInfo = styled.div`
 
   @media screen and (max-width: 480px) {
     padding: 0.5rem;
+    position: static;
+    transform: none;
+    width: 100%;
+    max-width: 300px;
   }
 `;
 
@@ -96,6 +116,7 @@ export const TechStack = styled.div`
 
   @media screen and (max-width: 480px) {
     gap: 0.5rem;
+    flex-flow: row wrap;
   }
 `;
 

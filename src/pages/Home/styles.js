@@ -48,26 +48,7 @@ export const TextWrapper = styled(motion.div)`
     font-size: clamp(1rem, 5vw, 3em);
     letter-spacing: 2px;
     margin: 2rem 0 3rem;
-<<<<<<< HEAD
     color: ${primaryColor};
-=======
-
-    background: #49ceff; /* fallback for old browsers */
-    background: -webkit-linear-gradient(
-      to right,
-      ${primaryColor},
-      #49ceff
-    ); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(
-      to right,
-      ${primaryColor},
-      #49ceff
-    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
->>>>>>> 6648ab05865f7e715763ef8c7224d02afd10af2d
 `;
 
 export const H1 = styled(motion.h1)`

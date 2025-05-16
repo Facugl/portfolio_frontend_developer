@@ -69,9 +69,9 @@ export const About = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <Paragraph>
-              Soy un desarrollador Full-Stack con experiencia en la creación de APIs RESTful y aplicaciones web responsivas que priorizan una excelente experiencia de usuario. Me especializo en tecnologías como Java, Spring Boot y React, trabajando con enfoque en la calidad, el rendimiento y la escalabilidad.<br />
-              Disfruto colaborar en equipos ágiles bajo metodologías como SCRUM, utilizando herramientas como Trello y Slack para mantener una comunicación clara y un flujo de trabajo eficiente.<br />
-              Me motiva asumir desafíos, seguir aprendiendo constantemente y aportar soluciones que generen valor real tanto al producto como al equipo. Mi objetivo es contribuir al crecimiento colectivo, combinando habilidades técnicas con una actitud proactiva y colaborativa. 🐱‍👤
+              I'm a Full-Stack developer with experience in building RESTful APIs and responsive web applications that prioritize an excellent user experience. I specialize in technologies like Java, Spring Boot, and React, focusing on quality, performance, and scalability. <br />
+              I enjoy collaborating in agile teams using methodologies like SCRUM, leveraging tools like Trello and Slack to maintain clear communication and an efficient workflow. <br />
+              I'm driven by tackling challenges, continuously learning, and delivering solutions that create real value for both the product and the team. My goal is to contribute to collective growth, combining technical skills with a proactive and collaborative attitude. 🐱‍👤
             </Paragraph>
             <ButtonsWrapper>
               <SocialWrapper>
