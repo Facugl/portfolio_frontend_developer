@@ -1,10 +1,8 @@
 import { Paragraph } from "./styles";
 import { Container } from "../../globalStyles";
-import { motion } from "framer-motion";
 import { Section } from "../../common/Section";
 import { useInView } from "react-intersection-observer";
-import { MyForm } from "../../components/Form";
-import { ToastContainer } from "react-toastify";
+import FormWithRef from "../../components/Form";
 import { TitleSection } from "../../common/TitleSection";
 
 export const Contact = () => {
@@ -30,7 +28,7 @@ export const Contact = () => {
           I would like to meet you and work together, write me and I will reply
           as soon as I can.
         </Paragraph>
-        <MyForm />
+        <FormWithRef />
       </Container>
     </Section>
   );

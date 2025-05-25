@@ -131,8 +131,8 @@ export const TechContainer = styled.div`
   justify-content: center;
 
   @media screen and (max-width: 768px) {
-    width: 18px;
-    height: 18px;
+    width: 22px;
+    height: 22px;
   }
 `;
 

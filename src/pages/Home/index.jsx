@@ -41,8 +41,8 @@ export const Home = () => {
             onInit={(typewriter) => {
               const phrases = [
                 "Front-End React Developer.",
-                "Chess player.",
                 "Back-End Java Developer.",
+                "Chess player.",
               ];
 
               phrases.forEach((phrase) => {

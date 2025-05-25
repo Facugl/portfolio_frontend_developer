@@ -14,6 +14,7 @@ import {
   TextArea,
   ButtonSubmit,
 } from "./styles";
+import { useRef } from "react";
 
 const InnerForm = (props) => {
   const {
@@ -24,10 +25,11 @@ const InnerForm = (props) => {
     handleBlur,
     values,
     handleSubmit,
+    formRef,
   } = props;
 
   return (
-    <FormContact>
+    <FormContact ref={formRef} onSubmit={handleSubmit}>
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ y: [-50, 0], opacity: 1 }}
@@ -69,7 +71,7 @@ const InnerForm = (props) => {
           <Label htmlFor="message">Message:</Label>
           <TextArea
             id="message"
-            component="textarea"
+            as="textarea"
             rows="5"
             name="message"
             placeholder="Enter your message..."
@@ -121,12 +123,12 @@ export const MyForm = withFormik({
 
   validationSchema: FormValidate,
 
-  handleSubmit: (_values, { setSubmitting, resetForm }) => {
+  handleSubmit: (_values, { setSubmitting, resetForm, props }) => {
     emailjs
       .sendForm(
         import.meta.env.VITE_SERVICE_ID,
         import.meta.env.VITE_TEMPLATE_ID,
-        FormContact.toString(),
+        props.formRef.current,
         import.meta.env.VITE_PUBLIC_KEY
       )
       .then(
@@ -144,8 +146,8 @@ export const MyForm = withFormik({
           resetForm();
           setSubmitting(false);
         },
-        () => {
-          toast.error("👎🏻 Upps... The message has failed!", {
+        (error) => {
+          toast.error(`👎🏻 Upps... The message has failed! ${error.text}`, {
             position: "bottom-center",
             autoClose: 5000,
             hideProgressBar: false,
@@ -155,7 +157,15 @@ export const MyForm = withFormik({
             progress: undefined,
             theme: "dark",
           });
+          setSubmitting(false);
         }
       );
   },
 })(InnerForm);
+
+const FormWithRef = (props) => {
+  const formRef = useRef();
+  return <MyForm {...props} formRef={formRef} />;
+};
+
+export default FormWithRef;

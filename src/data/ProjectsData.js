@@ -17,7 +17,7 @@ const projectsData = [
     id: 1,
     name: "URL Shortener",
     description:
-      "A full-stack app to shorten URLs, track clicks, and manage links with a user-friendly dashboard.",
+      "I developed a modern full-stack application for URL shortening and real-time analytics visualization. The backend was built with Spring Boot, implementing secure authentication using JWT. On the frontend, I used React 19 and Material-UI to create an interactive and responsive interface that allows users to manage URLs and view analytics (clicks, dates) using dynamic visualizations with Chart.js.",
     techStack: [
       {
         id: 1,
@@ -57,9 +57,9 @@ const projectsData = [
   },
   {
     id: 2,
-    name: "Crypto Currency App",
+    name: "CryptoCurrency Tracker",
     description:
-      "Search your favorite cryptocurrencies, add and remove them from your favorites list.",
+      "I developed a web application for real-time cryptocurrency tracking and analysis. The backend uses Firebase for secure user authentication and real-time data storage with Firestore. On the frontend, I designed a responsive and interactive interface with React.js, enabling users to track cryptocurrencies and save their favorites.",
     techStack: [
       {
         id: 1,
@@ -90,7 +90,7 @@ const projectsData = [
   {
     id: 3,
     name: "Restaurant Food Delivery App",
-    description: "Authenticate with your email and make multiple orders.",
+    description: "I developed a web application that allows users to register, browse products by category, and place orders. The interface was built with React, providing an interactive and responsive experience. I used Firebase for user authentication and real-time data storage. The application also features a shopping cart functionality for a complete shopping experience.",
     techStack: [
       {
         id: 1,
@@ -116,7 +116,7 @@ const projectsData = [
   {
     id: 4,
     name: "YouTube clone",
-    description: "Simple YouTube clone, fully responsive.",
+    description: "I built a YouTube clone using React and Material-UI, leveraging a custom API layer for fetching data. This API integration utilizes Axios to interact with the YouTube V3 API via RapidAPI, incorporating authentication through headers and dynamic request parameters to efficiently retrieve video data and channel information.",
     techStack: [
       {
         id: 1,
