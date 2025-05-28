@@ -22,6 +22,14 @@ export const ProjectsWrapper = styled.div`
   flex-direction: column;
   gap: 7rem;
 
+  @media screen and (max-width: 1220px) {
+    gap: 14rem;
+  }
+
+  @media screen and (max-width: 1020px) {
+    gap: 20rem;
+  }
+
   @media screen and (max-width: 768px) {
     margin: 2.5rem 0;
     gap: 5rem;

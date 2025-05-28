@@ -7,10 +7,16 @@ import { Link } from "../../common/Link";
 export const ProjectContainer = styled(motion.div)`
   width: 100%;
   height: 40vw;
+  max-height: 576px;
   position: relative;
   z-index: 9;
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 1200px) {
+    height:50vw;
+    max-height: none;
+  }
+
+  @media screen and (max-width: 768px) {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -29,23 +35,30 @@ export const ProjectImage = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 5;
 
   img {
     width: 85%;
     height: 80%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+  }
+
+  @media screen and (max-width: 768px) {
+    height: 42vw;
+    position: static;
+    transform: none;
   }
 
   @media screen and (max-width: 480px) {
-    height: 70vw;
-    position: static;
-    transform: none;
     width: 100%;
-    max-width: 300px;
+    height: 60vw;
+    margin: 0 px;
   }
 `;
 
 export const ProjectInfo = styled.div`
-  width: 32%;
+  width: 25%;
   position: absolute;
   top: 50%;
   left: ${({ position }) => (position !== "left" ? "0%" : "")};
@@ -60,6 +73,7 @@ export const ProjectInfo = styled.div`
   backdrop-filter: blur(7.4px);
   -webkit-backdrop-filter: blur(7.4px);
   padding: 1rem;
+  z-index: 10;
 
   @media screen and (min-width: 768px) {
     background: transparent;
@@ -67,12 +81,16 @@ export const ProjectInfo = styled.div`
     backdrop-filter: unset;
   }
 
-  @media screen and (max-width: 480px) {
-    padding: 0.5rem;
+  @media screen and (max-width: 768px) {
+    padding: 1rem 0rem;
     position: static;
     transform: none;
+    width: 73.33%;
+  }
+
+  @media screen and (max-width: 480px) {
+    padding: 1rem 0.5rem;
     width: 100%;
-    max-width: 300px;
   }
 `;
 
@@ -83,7 +101,7 @@ export const ProjectTitle = styled.h3`
   text-align: center;
 
   @media screen and (max-width: 768px) {
-    font-size: 0.75rem;
+    font-size: 1.25rem;
   }
 `;
 
@@ -95,12 +113,11 @@ export const ProjectDesc = styled.p`
   @media screen and (max-width: 768px) {
     font-size: 0.7rem;
     line-height: 1.2rem;
-    margin: 0.7rem 0;
   }
 
-  @media screen and (max-width: 480px) {
-    font-size: 0.6rem;
-    line-height: 1rem;
+  @media screen and (max-width: 768px) {
+    font-size: 1rem;
+    line-height: 1.7rem;
   }
 `;
 
@@ -108,21 +125,18 @@ export const TechStack = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1.5rem;
+  gap: .7rem;
 
   @media screen and (max-width: 768px) {
-    gap: 1rem;
-  }
-
-  @media screen and (max-width: 480px) {
-    gap: 0.5rem;
+    // gap: 1rem;
     flex-flow: row wrap;
+    margin: 1rem 0;
   }
 `;
 
 export const TechContainer = styled.div`
-  width: 28px;
-  height: 28px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   padding: 4px;
   background-color: #fff;
@@ -131,8 +145,8 @@ export const TechContainer = styled.div`
   justify-content: center;
 
   @media screen and (max-width: 768px) {
-    width: 22px;
-    height: 22px;
+    width: 30px;
+    height: 30px;
   }
 `;
 
@@ -148,18 +162,19 @@ export const ButtonsWrapper = styled.div`
   flex-direction: row;
   justify-content: space-between;
 
+  @media screen and (max-width: 1200px) {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
   @media screen and (max-width: 1024px) {
-    flex-direction: column;
+    margin-top: 1.5rem;
     gap: 0.8rem;
   }
 
-  @media screen and (max-width: 760px) {
-    flex-direction: column;
-    margin-top: 0.8rem;
-    gap: 0.8rem;
-  }
-
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 768px) {
+    flex-direction: row;
+    margin-top: 1.35rem;
     gap: 0.7rem;
   }
 `;
@@ -171,27 +186,34 @@ export const LinkButton = styled(Link)`
 `;
 
 export const ButtonLiveApp = styled(Button)`
+  font-size: 12px;
+
+  @media screen and (max-width: 1200px) {
+    width: 100%;
+  }
+
   @media screen and (max-width: 1024px) {
     width: 100%;
-    font-size: 1rem;
-    padding: 8px;
+    padding: 12px;
 
-    @media screen and (max-width: 640px) {
-      padding: 4px 8px;
-      font-size: 8px;
+    @media screen and (max-width: 768px) {
+      padding: 12px 24px;
     }
   }
 `;
 
 export const ButtonKnowMore = styled(Button)`
-  @media screen and (max-width: 1024px) {
+  font-size: 12px;
+
+  @media screen and (max-width: 1200px) {
     width: 100%;
-    font-size: 1rem;
-    padding: 8px;
   }
 
-  @media screen and (max-width: 640px) {
-    padding: 4px 8px;
-    font-size: 8px;
+  @media screen and (max-width: 1024px) {
+    padding: 12px;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 12px 24px;
   }
 `;
