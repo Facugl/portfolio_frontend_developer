@@ -45,14 +45,14 @@ export const Project = ({
         </TechStack>
         <ButtonsWrapper>
           <LinkButton href={url} target="_blank" rel="noopener noreferrer">
-            <ButtonLiveApp type="button">Live app</ButtonLiveApp>
+            <ButtonLiveApp type="button">Live Demo</ButtonLiveApp>
           </LinkButton>
           <LinkButton
             href={repository}
             target="_blank"
             rel="noopener noreferrer"
           >
-            <ButtonKnowMore type="button">Know more</ButtonKnowMore>
+            <ButtonKnowMore type="button">Source Code</ButtonKnowMore>
           </LinkButton>
         </ButtonsWrapper>
       </ProjectInfo>

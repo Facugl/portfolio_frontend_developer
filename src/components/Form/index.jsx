@@ -126,10 +126,10 @@ export const MyForm = withFormik({
   handleSubmit: (_values, { setSubmitting, resetForm, props }) => {
     emailjs
       .sendForm(
-        import.meta.env.VITE_SERVICE_ID,
-        import.meta.env.VITE_TEMPLATE_ID,
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         props.formRef.current,
-        import.meta.env.VITE_PUBLIC_KEY
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
       .then(
         () => {

@@ -58,6 +58,13 @@ export const H1 = styled(motion.h1)`
   margin-bottom: 1rem;
 `;
 
+export const H2 = styled(motion.h2)`
+  font-size: clamp(1rem, 5vw, 2em);
+  font-weight: normal;
+  text-align: center;
+  margin-bottom: 1rem;
+`;
+
 export const Span = styled.span`
   font-size: clamp(1rem, 5vw, 3em);
   letter-spacing: 2px;

@@ -1,4 +1,5 @@
 // Projects Images Preview
+export const bankingSystemImg = "assets/images/projects/banking_system.png";
 export const cryptoCurrencyImg = "assets/images/projects/crypto_currency.png";
 export const restaurantDeliveryImg =
   "assets/images/projects/restaurant_delivery.png";
@@ -27,3 +28,6 @@ export const docker = "assets/images/techStack/docker.png";
 export const springBoot = "assets/images/techStack/spring-boot.png";
 export const postgreSql = "assets/images/techStack/postgre-sql.png";
 export const mySql = "assets/images/techStack/my-sql.png";
+export const postman = "assets/images/techStack/postman.png";
+export const githubActions = "assets/images/techStack/github-actions.png";
+export const hibernate = "assets/images/techStack/hibernate.png";

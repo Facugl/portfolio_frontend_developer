@@ -3,7 +3,7 @@ import { useInView } from "react-intersection-observer";
 import { techStack } from "../../data/TechStackData";
 import { contactData } from "../../data/ContactData";
 import avatar from "/assets/images/avatar.png";
-import resume from "/assets/Facundo_Luna_Full-Stack_Developer_Resume.pdf";
+import resume from "/assets/Facundo_Luna_Back-End_Developer_Resume.pdf";
 import { LinksSocialMedia } from "../../common/LinkSocialMedia/index";
 import { SkillItem } from "../../components/Skill/index";
 import { Section } from "../../common/Section";
@@ -50,7 +50,8 @@ export const About = () => {
               <AvatarImg>
                 <Img src={avatar} alt="Facundo Luna" />
                 <p>
-                  Let's play<br /> a game 😎 <FaChess />
+                  Let's play
+                  <br /> a game 😎 <FaChess />
                 </p>
                 <a
                   href="https://www.chess.com/member/gaston_bj"
@@ -69,9 +70,21 @@ export const About = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <Paragraph>
-              I'm a Full-Stack developer with experience in building RESTful APIs and responsive web applications that prioritize an excellent user experience. I specialize in technologies like Java, Spring Boot, and React, focusing on quality, performance, and scalability. <br />
-              I enjoy collaborating in agile teams using methodologies like SCRUM, leveraging tools like Trello and Slack to maintain clear communication and an efficient workflow. <br />
-              I'm driven by tackling challenges, continuously learning, and delivering solutions that create real value for both the product and the team. My goal is to contribute to collective growth, combining technical skills with a proactive and collaborative attitude. 🐱‍👤
+              I'm a Java Backend Developer with experience building secure and
+              scalable REST APIs using Spring Boot, Spring Security, and
+              relational databases.
+            </Paragraph>
+            <Paragraph>
+              I have participated in end-to-end web application development,
+              collaborating with frontend teams and contributing React-based
+              interfaces when required, while maintaining a strong backend
+              focus.
+            </Paragraph>
+            <Paragraph>
+              Currently, I'm studying a Bachelor's Degree in Data Science,
+              strengthening my skills in data analysis, modeling, and
+              data-driven systems, with the goal of growing as a backend
+              engineer with a strong data-oriented profile.
             </Paragraph>
             <ButtonsWrapper>
               <SocialWrapper>
@@ -83,7 +96,7 @@ export const About = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 href={resume}
-                download="Facundo_Luna_Full-Stack_Developer_Resume.pdf"
+                download="Facundo_Luna_Back-End_Developer_Resume.pdf"
               >
                 <ButtonDownloadCV type="button">
                   Download Resume

@@ -26,7 +26,7 @@ export const Projects = () => {
           whileInView={{ y: [-50, 0], opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
-          These are some of my latest works.
+          A selection of projects that demonstrate my experience building full-stack applications using Java, Spring Boot and React.
         </Paragraph>
         <ProjectsWrapper>
           {projectsData?.map((item) => (

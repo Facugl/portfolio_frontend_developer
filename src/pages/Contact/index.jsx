@@ -25,8 +25,8 @@ export const Contact = () => {
           whileInView={{ y: [-50, 0], opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
-          I would like to meet you and work together, write me and I will reply
-          as soon as I can.
+          Interested in working together or discussing an opportunity? Feel free
+          to reach out.
         </Paragraph>
         <FormWithRef />
       </Container>
