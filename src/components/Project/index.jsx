@@ -27,14 +27,15 @@ export const Project = ({
   return (
     <ProjectContainer
       key={id}
+      $position={position}
       initial={{ opacity: 0 }}
       whileInView={{ y: [-50, 0], opacity: 1 }}
       transition={{ duration: 0.2 }}
     >
-      <ProjectImage position={position} whileHover={{ scale: 1.1 }}>
+      <ProjectImage whileHover={{ scale: 1.1 }}>
         <img src={logoImgPath} alt={name} />
       </ProjectImage>
-      <ProjectInfo position={position}>
+      <ProjectInfo>
         <ProjectTitle>{name}</ProjectTitle>
         <Highlights>
           {highlights?.map((text) => (

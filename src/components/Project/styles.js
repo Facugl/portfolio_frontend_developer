@@ -5,32 +5,25 @@ import { Button } from "../../common/Button";
 
 export const ProjectContainer = styled(motion.div)`
   width: 100%;
-  height: 40vw;
-  max-height: 576px;
   position: relative;
   z-index: 9;
-
-  @media screen and (max-width: 1200px) {
-    height:50vw;
-    max-height: none;
-  }
+  display: flex;
+  flex-direction: ${({ $position }) =>
+    $position === "right" ? "row-reverse" : "row"};
+  align-items: center;
+  justify-content: space-between;
 
   @media screen and (max-width: 768px) {
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    height:auto;
     gap: 20px;
   }
 `;
 
 export const ProjectImage = styled(motion.div)`
   width: 73.33%;
-  height: 100%;
+  height: 40vw;
+  max-height: 576px;
   background-color: ${darkAlphaColor};
-  position: absolute;
-  left: ${({ position }) => (position === "left" ? "0%" : "")};
-  right: ${({ position }) => (position === "right" ? "0%" : "")};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -45,50 +38,34 @@ export const ProjectImage = styled(motion.div)`
 
   @media screen and (max-width: 768px) {
     height: 42vw;
-    position: static;
-    transform: none;
   }
 
   @media screen and (max-width: 480px) {
     width: 100%;
     height: 60vw;
-    margin: 0 px;
   }
 `;
 
 export const ProjectInfo = styled.div`
   width: 25%;
-  position: absolute;
-  top: 50%;
-  left: ${({ position }) => (position !== "left" ? "0%" : "")};
-  right: ${({ position }) => (position !== "right" ? "0%" : "")};
-  transform: translateY(-50%);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.02);
-  border-radius: 0.25rem;
-  box-shadow: 0 0.25rem 2rem rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(7.4px);
-  -webkit-backdrop-filter: blur(7.4px);
   padding: 1rem;
   z-index: 10;
 
-  @media screen and (min-width: 768px) {
-    background: transparent;
-    box-shadow: none;
-    backdrop-filter: unset;
-  }
-
   @media screen and (max-width: 768px) {
-    padding: 1rem 0rem;
-    position: static;
-    transform: none;
+    padding: 1.5rem;
     width: 73.33%;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 0.25rem;
+    box-shadow: 0 0.25rem 2rem rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.4px);
+    -webkit-backdrop-filter: blur(7.4px);
   }
 
   @media screen and (max-width: 480px) {
-    padding: 1rem 0.5rem;
+    padding: 1.25rem 1rem;
     width: 100%;
   }
 `;
