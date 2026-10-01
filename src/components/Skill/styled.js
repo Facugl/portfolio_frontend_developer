@@ -53,17 +53,17 @@ export const Skill = styled.div`
   span {
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 14px;
+    font-size: ${({ $long }) => ($long ? "11px" : "14px")};
     position: relative;
     z-index: 99;
     color: #fff;
 
     @media screen and (max-width: 768px) {
-      font-size: 10px;
+      font-size: ${({ $long }) => ($long ? "8px" : "10px")};
     }
 
     @media screen and (max-width: 480px) {
-      font-size: 10px;
+      font-size: ${({ $long }) => ($long ? "8px" : "10px")};
     }
   }
 

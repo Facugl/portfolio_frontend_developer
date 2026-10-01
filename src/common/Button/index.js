@@ -14,33 +14,31 @@ export const Button = styled.button`
   border: 2px solid ${primaryColor};
   cursor: pointer;
   position: relative;
-  overflow: hidden;
+  isolation: isolate;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
   letter-spacing: 1px;
+  transition: color 0.3s ease;
 
   &:before {
     content: "";
-    background: ${primaryColor};
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    inset: -2px;
+    border-radius: inherit;
+    background: ${primaryColor};
     z-index: -1;
-    transition: all 0.6s ease;
-    width: calc(100% + 4px);
-    height: 0%;
-  }
-
-  &:hover:before {
-    height: 200%;
+    clip-path: inset(50% 0 50% 0);
+    transition: clip-path 0.6s ease;
   }
 
   &:hover {
-    z-index: 1;
     color: ${darkColor};
+  }
+
+  &:hover:before {
+    clip-path: inset(0 0 0 0);
   }
 
   &:disabled {

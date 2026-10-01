@@ -26,21 +26,13 @@ export const Projects = () => {
           whileInView={{ y: [-50, 0], opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
-          A selection of projects that demonstrate my experience building full-stack applications using Java, Spring Boot and React.
+          Backend-focused projects: REST APIs built with Spring Boot, secured
+          with Spring Security, backed by automated tests and shipped through
+          CI/CD.
         </Paragraph>
         <ProjectsWrapper>
           {projectsData?.map((item) => (
-            <Project
-              key={item.id}
-              id={item.id}
-              logoImgPath={item.logoImgPath}
-              name={item.name}
-              description={item.description}
-              techStack={item.techStack}
-              url={item.url}
-              repository={item.repository}
-              position={item.position}
-            />
+            <Project key={item.id} {...item} />
           ))}
         </ProjectsWrapper>
       </Container>

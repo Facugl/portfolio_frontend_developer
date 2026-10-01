@@ -1,6 +1,6 @@
 import {
   ProjectContainer,
-  ProjectDesc,
+  Highlights,
   ProjectImage,
   ProjectInfo,
   ProjectTitle,
@@ -11,17 +11,19 @@ import {
   ButtonLiveApp,
   ButtonKnowMore,
   LinkButton,
+  DemoNote,
 } from "./styles";
 
 export const Project = ({
   id,
   logoImgPath,
   name,
-  description,
+  highlights,
   techStack,
   url,
   repository,
   position,
+  coldStart,
 }) => {
   return (
     <ProjectContainer
@@ -34,8 +36,12 @@ export const Project = ({
         <img src={logoImgPath} alt={name} />
       </ProjectImage>
       <ProjectInfo position={position}>
-        <ProjectTitle>{name} </ProjectTitle>
-        <ProjectDesc>{description}</ProjectDesc>
+        <ProjectTitle>{name}</ProjectTitle>
+        <Highlights>
+          {highlights?.map((text) => (
+            <li key={text}>{text}</li>
+          ))}
+        </Highlights>
         <TechStack>
           {techStack?.map((skill) => (
             <TechContainer key={skill.id}>
@@ -55,6 +61,11 @@ export const Project = ({
             <ButtonKnowMore type="button">Source Code</ButtonKnowMore>
           </LinkButton>
         </ButtonsWrapper>
+        {coldStart && (
+          <DemoNote>
+            Free-tier hosting: the demo may take up to a minute to wake up.
+          </DemoNote>
+        )}
       </ProjectInfo>
     </ProjectContainer>
   );

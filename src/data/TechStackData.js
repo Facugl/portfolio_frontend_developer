@@ -12,7 +12,9 @@ import {
   postgreSql,
   postman,
   githubActions,
-  hibernate
+  hibernate,
+  springSecurity,
+  junit,
 } from "./LinksData";
 
 export const techStack = [
@@ -34,6 +36,20 @@ export const techStack = [
     url: hibernate,
     color: "#59666C",
     category: "backend",
+  },
+  {
+    id: 15,
+    name: "Spring Security",
+    url: springSecurity,
+    color: "#6BB344",
+    category: "backend",
+  },
+  {
+    id: 16,
+    name: "JUnit",
+    url: junit,
+    color: "#DC514A",
+    category: "testing",
   },
   {
     id: 4,

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { darkAlphaColor } from "../../globalStyles";
+import { darkAlphaColor, grayColor, primaryColor } from "../../globalStyles";
 import { motion } from "framer-motion";
 import { Button } from "../../common/Button";
 import { Link } from "../../common/Link";
@@ -105,20 +105,45 @@ export const ProjectTitle = styled.h3`
   }
 `;
 
-export const ProjectDesc = styled.p`
-  font-size: 1rem;
+export const Highlights = styled.ul`
+  list-style: none;
   margin: 1rem 0;
-  line-height: 1.7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
 
-  @media screen and (max-width: 768px) {
-    font-size: 0.7rem;
-    line-height: 1.2rem;
+  li {
+    position: relative;
+    padding-left: 1rem;
+    color: ${grayColor};
+    font-size: 0.95rem;
+    line-height: 1.5rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.6rem;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: ${primaryColor};
+    }
   }
 
   @media screen and (max-width: 768px) {
-    font-size: 1rem;
-    line-height: 1.7rem;
+    li {
+      font-size: 1rem;
+      line-height: 1.6rem;
+    }
   }
+`;
+
+export const DemoNote = styled.p`
+  margin-top: 0.75rem;
+  font-size: 0.75rem;
+  text-align: center;
+  opacity: 0.7;
 `;
 
 export const TechStack = styled.div`

@@ -70,21 +70,20 @@ export const About = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <Paragraph>
-              I'm a Java Backend Developer with experience building secure and
-              scalable REST APIs using Spring Boot, Spring Security, and
-              relational databases.
+              I'm a backend developer based in Argentina, building REST APIs
+              with Java and Spring Boot. I focus on what makes a backend
+              reliable: clear domain logic, solid security, and automated tests
+              that make every deploy predictable.
             </Paragraph>
             <Paragraph>
-              I have participated in end-to-end web application development,
-              collaborating with frontend teams and contributing React-based
-              interfaces when required, while maintaining a strong backend
-              focus.
+              I've collaborated remotely in agile teams through GitHub pull
+              requests and Scrum, and I can work on the frontend with React and
+              TypeScript when a feature needs it.
             </Paragraph>
             <Paragraph>
-              Currently, I'm studying a Bachelor's Degree in Data Science,
-              strengthening my skills in data analysis, modeling, and
-              data-driven systems, with the goal of growing as a backend
-              engineer with a strong data-oriented profile.
+              I'm also studying for a Bachelor's Degree in Data Science, which
+              pushes me toward data-driven backend systems. I'm open to remote
+              roles and work in English at a professional level.
             </Paragraph>
             <ButtonsWrapper>
               <SocialWrapper>
@@ -111,17 +110,17 @@ export const About = () => {
           transition={{ duration: 0.5, delay: 0.4 }}
         >
           <Column>
-            {techStack?.slice(0, 5).map((skill) => (
+            {techStack?.slice(0, 6).map((skill) => (
               <SkillItem key={skill.id} {...skill} />
             ))}
           </Column>
           <Column>
-            {techStack?.slice(5, 9).map((skill) => (
+            {techStack?.slice(6, 11).map((skill) => (
               <SkillItem key={skill.id} {...skill} />
             ))}
           </Column>
           <Column>
-            {techStack?.slice(9, 14).map((skill) => (
+            {techStack?.slice(11, 16).map((skill) => (
               <SkillItem key={skill.id} {...skill} />
             ))}
           </Column>
