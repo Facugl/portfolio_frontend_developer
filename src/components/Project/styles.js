@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { darkAlphaColor, grayColor, primaryColor } from "../../globalStyles";
 import { motion } from "framer-motion";
 import { Button } from "../../common/Button";
-import { Link } from "../../common/Link";
 
 export const ProjectContainer = styled(motion.div)`
   width: 100%;
@@ -201,12 +200,6 @@ export const ButtonsWrapper = styled.div`
     flex-direction: row;
     margin-top: 1.35rem;
     gap: 0.7rem;
-  }
-`;
-
-export const LinkButton = styled(Link)`
-  @media screen and (max-width: 1024px) {
-    width: 100%;
   }
 `;
 

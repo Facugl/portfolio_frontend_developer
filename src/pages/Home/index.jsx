@@ -1,8 +1,8 @@
-import { MdArrowDownward } from "react-icons/md";
+import { MdArrowDownward, MdFileDownload } from "react-icons/md";
 import { useInView } from "react-intersection-observer";
-import { motion } from "framer-motion";
 import { Link } from "react-scroll";
-import { CanvasContainer, H1, H2, Hero, HeroContainer } from "./styles";
+import resume from "/assets/Facundo_Luna_Back-End_Developer_Resume.pdf";
+import { CanvasContainer, H1, H2, Hero, HeroButtons, HeroContainer } from "./styles";
 import { Button } from "../../common/Button";
 
 export const Home = () => {
@@ -30,18 +30,31 @@ export const Home = () => {
         >
           Java Backend Developer specializing in Spring Boot and REST APIs.
         </H2>
-        <motion.div
+        <HeroButtons
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <Link to="projects" smooth={true} duration={500} offset={-40}>
-            <Button type="button">
-              View my projects
-              <MdArrowDownward />
-            </Button>
-          </Link>
-        </motion.div>
+          <Button
+            as={Link}
+            href="#projects"
+            to="projects"
+            smooth={true}
+            duration={500}
+            offset={-40}
+          >
+            View my projects
+            <MdArrowDownward />
+          </Button>
+          <Button
+            as="a"
+            href={resume}
+            download="Facundo_Luna_Back-End_Developer_Resume.pdf"
+          >
+            Download CV
+            <MdFileDownload />
+          </Button>
+        </HeroButtons>
       </HeroContainer>
     </Hero>
   );

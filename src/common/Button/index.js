@@ -4,7 +4,8 @@ import { darkColor, primaryColor } from "../../globalStyles";
 export const Button = styled.button`
   border-radius: 4px;
   background: none;
-  white-space: space nowrap;
+  white-space: nowrap;
+  text-decoration: none;
   padding: 12px 24px;
   font-weight: 600;
   color: ${primaryColor};

@@ -10,7 +10,6 @@ import {
   TechContainer,
   ButtonLiveApp,
   ButtonKnowMore,
-  LinkButton,
   DemoNote,
 } from "./styles";
 
@@ -50,16 +49,22 @@ export const Project = ({
           ))}
         </TechStack>
         <ButtonsWrapper>
-          <LinkButton href={url} target="_blank" rel="noopener noreferrer">
-            <ButtonLiveApp type="button">Live Demo</ButtonLiveApp>
-          </LinkButton>
-          <LinkButton
+          <ButtonLiveApp
+            as="a"
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Live Demo
+          </ButtonLiveApp>
+          <ButtonKnowMore
+            as="a"
             href={repository}
             target="_blank"
             rel="noopener noreferrer"
           >
-            <ButtonKnowMore type="button">Source Code</ButtonKnowMore>
-          </LinkButton>
+            Source Code
+          </ButtonKnowMore>
         </ButtonsWrapper>
         {coldStart && (
           <DemoNote>

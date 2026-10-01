@@ -38,6 +38,13 @@ export const CanvasContainer = styled.div`
   }
 `;
 
+export const HeroButtons = styled(motion.div)`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+`;
+
 export const TextWrapper = styled(motion.div)`
   display: flex;
   align-items: center;

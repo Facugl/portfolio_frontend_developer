@@ -22,7 +22,6 @@ import {
   SkillWrapper,
   SocialWrapper,
 } from "./styles";
-import { Link } from "../../common/Link";
 import { FaChess } from "react-icons/fa";
 
 export const About = () => {
@@ -91,16 +90,13 @@ export const About = () => {
                   <LinksSocialMedia key={item.id} {...item} />
                 ))}
               </SocialWrapper>
-              <Link
-                target="_blank"
-                rel="noopener noreferrer"
+              <ButtonDownloadCV
+                as="a"
                 href={resume}
                 download="Facundo_Luna_Back-End_Developer_Resume.pdf"
               >
-                <ButtonDownloadCV type="button">
-                  Download Resume
-                </ButtonDownloadCV>
-              </Link>
+                Download Resume
+              </ButtonDownloadCV>
             </ButtonsWrapper>
           </InfoContainer>
         </ContentWrapper>
