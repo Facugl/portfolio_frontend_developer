@@ -1,5 +1,5 @@
 // Projects Images Preview
-export const bankingSystemImg = "assets/images/projects/banking_system.png";
+export const bankingSystemImg = "assets/images/projects/banking_system.jpg";
 export const inventoryIqImg = "assets/images/projects/inventoryiq.png";
 export const cryptoCurrencyImg = "assets/images/projects/crypto_currency.png";
 export const restaurantDeliveryImg =
