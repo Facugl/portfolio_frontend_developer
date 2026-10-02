@@ -169,7 +169,7 @@ export const InfoContainer = styled(motion.div)`
 
   @media screen and (max-width: 768px) {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     width: 100%;
   }
 `;
@@ -177,6 +177,10 @@ export const InfoContainer = styled(motion.div)`
 export const Paragraph = styled.p`
   font-size: 1.1rem;
   line-height: 1.8rem;
+
+  & + & {
+    margin-top: 1rem;
+  }
 
   @media screen and (max-width: 768px) {
     margin-top: 2rem;
@@ -198,6 +202,7 @@ export const ButtonsWrapper = styled.div`
   gap: 4rem;
 
   @media screen and (max-width: 768px) {
+    order: -1;
     flex-direction: column;
     align-items: center;
     margin: 2rem auto;
@@ -242,12 +247,17 @@ export const SkillWrapper = styled(motion.div)`
   margin-top: 5rem;
 
   @media screen and (max-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: center;
+    gap: 10px;
     margin-top: 2rem;
   }
 
   @media screen and (max-width: 480px) {
+    display: flex;
     flex-direction: row;
-    gap: 10px;
+    align-items: flex-start;
     margin-top: 3rem;
   }
 `;
@@ -257,7 +267,12 @@ export const Column = styled.div`
   flex-direction: row;
   gap: 1rem;
 
+  @media screen and (max-width: 768px) {
+    display: contents;
+  }
+
   @media screen and (max-width: 480px) {
+    display: flex;
     flex-direction: column;
     gap: 10px;
   }

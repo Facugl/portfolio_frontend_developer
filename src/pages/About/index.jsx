@@ -6,6 +6,7 @@ import avatar from "/assets/images/avatar.png";
 import resume from "/assets/Facundo_Luna_Back-End_Developer_Resume.pdf";
 import { LinksSocialMedia } from "../../common/LinkSocialMedia/index";
 import { SkillItem } from "../../components/Skill/index";
+import { Experience } from "../../components/Experience";
 import { Section } from "../../common/Section";
 import { TitleSection } from "../../common/TitleSection";
 import {
@@ -75,15 +76,15 @@ export const About = () => {
               that make every deploy predictable.
             </Paragraph>
             <Paragraph>
-              I've collaborated remotely in agile teams through GitHub pull
-              requests and Scrum, and I can work on the frontend with React and
-              TypeScript when a feature needs it.
+              When a feature needs it, I can also work on the frontend with
+              React and TypeScript.
             </Paragraph>
             <Paragraph>
               I'm also studying for a Bachelor's Degree in Data Science, which
               pushes me toward data-driven backend systems. I'm open to remote
               roles and work in English at a professional level.
             </Paragraph>
+            <Experience />
             <ButtonsWrapper>
               <SocialWrapper>
                 {contactData?.map((item) => (
