@@ -3,10 +3,10 @@ import { FormValidate } from "../../utils/validateForm";
 import emailjs from "@emailjs/browser";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { motion } from "framer-motion";
 import { reveal } from "../../utils/animations";
 import {
   ErrorMsg,
+  FormCard,
   FormContact,
   Input,
   InputsWrapper,
@@ -31,12 +31,10 @@ const InnerForm = (props) => {
 
   return (
     <FormContact ref={formRef} onSubmit={handleSubmit}>
-      <motion.div
-        {...reveal()}
-      >
+      <FormCard {...reveal()}>
         <InputsWrapper>
           <InputWrapper>
-            <Label htmlFor="name">Name:</Label>
+            <Label htmlFor="name">Name</Label>
             <Input
               id="name"
               type="text"
@@ -50,7 +48,7 @@ const InnerForm = (props) => {
             {touched.name && errors.name && <ErrorMsg>{errors.name}</ErrorMsg>}
           </InputWrapper>
           <InputWrapper>
-            <Label htmlFor="email">Email:</Label>
+            <Label htmlFor="email">Email</Label>
             <Input
               id="email"
               type="email"
@@ -66,8 +64,8 @@ const InnerForm = (props) => {
             )}
           </InputWrapper>
         </InputsWrapper>
-        <InputWrapper style={{ marginTop: ".5rem" }}>
-          <Label htmlFor="message">Message:</Label>
+        <InputWrapper>
+          <Label htmlFor="message">Message</Label>
           <TextArea
             id="message"
             as="textarea"
@@ -92,9 +90,9 @@ const InnerForm = (props) => {
             !!(errors.message && touched.message)
           }
         >
-          Submit
+          Send message
         </ButtonSubmit>
-      </motion.div>
+      </FormCard>
       <ToastContainer
         position="bottom-center"
         autoClose={5000}

@@ -1,25 +1,39 @@
 import styled from "styled-components";
 import { grayColor, primaryColor } from "../../globalStyles";
 import { Form, Field } from "formik";
+import { motion } from "framer-motion";
 import { Button } from "../../common/Button";
 
-export const Paragraph = styled.p`
-  margin-top: 1rem;
-  line-height: 1.7rem;
-  text-align: center;
-`;
+const errorColor = "#fc8181";
 
 export const FormContact = styled(Form)`
-  width: 500px;
-  display: flex;
-  flex-direction: column;
-  margin: 2rem auto 0;
-  border-radius: 0.25rem;
+  width: 100%;
+  max-width: 560px;
+  margin: 2.5rem auto 0;
   position: relative;
   z-index: 999;
+`;
+
+export const FormCard = styled(motion.div)`
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.02);
 
   @media screen and (max-width: 480px) {
-    width: 100%;
+    padding: 1.25rem 1rem;
+  }
+`;
+
+export const InputsWrapper = styled.div`
+  display: flex;
+  gap: 1rem;
+
+  @media screen and (max-width: 480px) {
+    flex-direction: column;
+    gap: 0;
   }
 `;
 
@@ -27,77 +41,64 @@ export const InputWrapper = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
+  margin-bottom: 1.25rem;
 `;
 
 export const Label = styled.label`
   color: ${grayColor};
   margin-bottom: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
   cursor: pointer;
-  font-size: 0.9rem;
 `;
 
 export const Input = styled(Field)`
-  border-radius: 0.25rem;
+  width: 100%;
   font-size: 1rem;
-  padding: 8px;
-  margin-bottom: 0.5rem;
-  border: 2px solid ${primaryColor};
-  outline: none;
-  color: ${primaryColor};
-  background-color: #cfdbd530;
+  padding: 0.75rem 1rem;
+  color: #fff;
   caret-color: ${primaryColor};
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 
   &::placeholder {
-    font-size: 1rem;
     color: ${grayColor};
-    opacity: 0.8;
+    opacity: 0.5;
+  }
+
+  &:focus {
+    border-color: ${primaryColor};
+    box-shadow: 0 0 0 3px rgba(62, 166, 255, 0.15);
   }
 
   &.input-error {
-    border-color: #fc8181;
-    caret-color: #fc8181;
+    border-color: ${errorColor};
+    caret-color: ${errorColor};
   }
 
-  &.input-ok {
-    border-color: #42cc79;
-    color: #42cc79;
-    caret-color: #42cc79;
-    background-color: #cfdbd530;
-    font-weight: 700;
-  }
-`;
-
-export const InputsWrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
-  gap: 0.5rem;
-
-  @media screen and (max-width: 480px) {
-    flex-direction: column;
+  &.input-error:focus {
+    box-shadow: 0 0 0 3px rgba(252, 129, 129, 0.15);
   }
 `;
 
 export const TextArea = styled(Input)`
   resize: none;
-
-  &::placeholder {
-    font-size: 1rem;
-    color: ${grayColor};
-    opacity: 0.8;
-  }
 `;
 
 export const ErrorMsg = styled.div`
   font-size: 0.8rem;
-  font-weight: 700;
-  color: #fc8181;
-  margin-bottom: 0.5rem;
-  border-radius: 0.25rem;
+  font-weight: 600;
+  color: ${errorColor};
+  margin-top: 0.4rem;
 `;
 
 export const ButtonSubmit = styled(Button)`
-  width: 25%;
-  margin-top: 2rem;
+  margin: 0.5rem auto 0;
+  min-width: 200px;
 
   @media screen and (max-width: 480px) {
     width: 100%;

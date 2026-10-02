@@ -21,28 +21,21 @@ export const ProjectContainer = styled(motion.div)`
 
 export const ProjectImage = styled(motion.div)`
   width: 73.33%;
-  height: 40vw;
-  max-height: 576px;
+  padding: 18px;
   background-color: ${darkAlphaColor};
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  border-radius: 6px;
   z-index: 5;
 
   img {
-    width: 85%;
-    height: 80%;
-    object-fit: contain;
-    transition: transform 0.3s ease;
-  }
-
-  @media screen and (max-width: 768px) {
-    height: 42vw;
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
   }
 
   @media screen and (max-width: 480px) {
     width: 100%;
-    height: 60vw;
+    padding: 10px;
   }
 `;
 

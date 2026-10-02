@@ -5,7 +5,6 @@ import { Home } from "./pages/Home";
 import { About } from "./pages/About";
 import { Projects } from "./pages/Projects";
 import { Contact } from "./pages/Contact";
-import { Footer } from "./components/Footer";
 import Navbar from "./components/Navbar";
 import { CanvasContainer, MainBg } from "./pages/Home/styles";
 import { useInView } from "react-intersection-observer";
@@ -33,7 +32,6 @@ function App() {
       <Projects />
       <About />
       <Contact />
-      <Footer />
     </>
   );
 }

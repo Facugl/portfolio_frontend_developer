@@ -1,27 +1,16 @@
-import { EmailLink, Paragraph } from "./styles";
+import { ContactSection, EmailLink, Paragraph } from "./styles";
 import { Container } from "../../globalStyles";
-import { Section } from "../../common/Section";
-import { useInView } from "react-intersection-observer";
 import FormWithRef from "../../components/Form";
 import { TitleSection } from "../../common/TitleSection";
+import { Footer } from "../../components/Footer";
 import { reveal } from "../../utils/animations";
 
 export const Contact = () => {
-  const { ref, inView } = useInView({
-    rootMargin: "-80px",
-  });
-
   return (
-    <Section ref={ref} id="contact">
+    <ContactSection id="contact">
       <Container>
-        <TitleSection
-          {...reveal()}
-        >
-          Contact
-        </TitleSection>
-        <Paragraph
-          {...reveal()}
-        >
+        <TitleSection {...reveal()}>Contact</TitleSection>
+        <Paragraph {...reveal()}>
           Interested in working together or discussing an opportunity? Feel free
           to reach out.
           <br />
@@ -33,6 +22,7 @@ export const Contact = () => {
         </Paragraph>
         <FormWithRef />
       </Container>
-    </Section>
+      <Footer />
+    </ContactSection>
   );
 };
