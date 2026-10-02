@@ -20,11 +20,11 @@ export const ProjectsWrapper = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 7rem;
+  gap: 9rem;
 
   @media screen and (max-width: 768px) {
     margin: 2.5rem 0;
-    gap: 5rem;
+    gap: 6rem;
   }
 
   @media screen and (max-width: 640px) {

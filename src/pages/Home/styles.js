@@ -43,6 +43,12 @@ export const HeroButtons = styled(motion.div)`
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
+
+  @media screen and (max-width: 480px) {
+    flex-direction: column;
+    align-items: stretch;
+    width: min(100%, 280px);
+  }
 `;
 
 export const TextWrapper = styled(motion.div)`
@@ -59,17 +65,26 @@ export const TextWrapper = styled(motion.div)`
 `;
 
 export const H1 = styled(motion.h1)`
-  font-size: clamp(1rem, 5vw, 3em);
-  font-weight: normal;
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  font-weight: 700;
+  letter-spacing: -1px;
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 `;
 
 export const H2 = styled(motion.h2)`
-  font-size: clamp(1rem, 5vw, 2em);
+  font-size: clamp(1.1rem, 3.5vw, 1.75rem);
   font-weight: normal;
   text-align: center;
+  color: ${primaryColor};
   margin-bottom: 1rem;
+`;
+
+export const Tagline = styled(motion.p)`
+  font-size: clamp(0.9rem, 2.5vw, 1.05rem);
+  letter-spacing: 1px;
+  text-align: center;
+  margin-bottom: 2.5rem;
 `;
 
 export const Span = styled.span`

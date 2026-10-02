@@ -1,9 +1,10 @@
-import { Paragraph } from "./styles";
+import { EmailLink, Paragraph } from "./styles";
 import { Container } from "../../globalStyles";
 import { Section } from "../../common/Section";
 import { useInView } from "react-intersection-observer";
 import FormWithRef from "../../components/Form";
 import { TitleSection } from "../../common/TitleSection";
+import { reveal } from "../../utils/animations";
 
 export const Contact = () => {
   const { ref, inView } = useInView({
@@ -14,19 +15,21 @@ export const Contact = () => {
     <Section ref={ref} id="contact">
       <Container>
         <TitleSection
-          initial={{ opacity: 0 }}
-          whileInView={{ y: [-50, 0], opacity: 1 }}
-          transition={{ duration: 0.5 }}
+          {...reveal()}
         >
           Contact
         </TitleSection>
         <Paragraph
-          initial={{ opacity: 0 }}
-          whileInView={{ y: [-50, 0], opacity: 1 }}
-          transition={{ duration: 0.5 }}
+          {...reveal()}
         >
           Interested in working together or discussing an opportunity? Feel free
           to reach out.
+          <br />
+          Email me at{" "}
+          <EmailLink href="mailto:facundolunaok@gmail.com">
+            facundolunaok@gmail.com
+          </EmailLink>{" "}
+          or use the form below.
         </Paragraph>
         <FormWithRef />
       </Container>

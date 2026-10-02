@@ -5,6 +5,7 @@ import { Section } from "../../common/Section";
 import { Project } from "../../components/Project";
 import { TitleSection } from "../../common/TitleSection";
 import projectsData from "../../data/ProjectsData";
+import { reveal } from "../../utils/animations";
 
 export const Projects = () => {
   const { ref, inView } = useInView({
@@ -15,16 +16,12 @@ export const Projects = () => {
     <Section ref={ref} id="projects">
       <Container>
         <TitleSection
-          initial={{ opacity: 0 }}
-          whileInView={{ y: [-50, 0], opacity: 1 }}
-          transition={{ duration: 0.5 }}
+          {...reveal()}
         >
           Projects
         </TitleSection>
         <Paragraph
-          initial={{ opacity: 0 }}
-          whileInView={{ y: [-50, 0], opacity: 1 }}
-          transition={{ duration: 0.5 }}
+          {...reveal()}
         >
           Backend-focused projects: REST APIs built with Spring Boot, secured
           with Spring Security, backed by automated tests and shipped through

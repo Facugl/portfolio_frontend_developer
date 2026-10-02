@@ -1,6 +1,6 @@
 import { Container } from "../../globalStyles";
 import { useInView } from "react-intersection-observer";
-import { techStack } from "../../data/TechStackData";
+import { techCategories, techStack } from "../../data/TechStackData";
 import { contactData } from "../../data/ContactData";
 import avatar from "/assets/images/avatar.png";
 import resume from "/assets/Facundo_Luna_Back-End_Developer_Resume.pdf";
@@ -9,18 +9,19 @@ import { SkillItem } from "../../components/Skill/index";
 import { Experience } from "../../components/Experience";
 import { Section } from "../../common/Section";
 import { TitleSection } from "../../common/TitleSection";
+import { reveal } from "../../utils/animations";
 import {
   AvatarImg,
   AvatarWrapper,
   ButtonDownloadCV,
   ButtonsWrapper,
-  Column,
   ContentWrapper,
+  GroupItems,
   ImageContainer,
   Img,
   InfoContainer,
   Paragraph,
-  SkillWrapper,
+  SkillGroups,
   SocialWrapper,
 } from "./styles";
 import { FaChess } from "react-icons/fa";
@@ -34,17 +35,13 @@ export const About = () => {
     <Section ref={ref} id="about">
       <Container>
         <TitleSection
-          initial={{ opacity: 0 }}
-          whileInView={{ y: [-50, 0], opacity: 1 }}
-          transition={{ duration: 0.5 }}
+          {...reveal()}
         >
           About
         </TitleSection>
         <ContentWrapper>
           <ImageContainer
-            initial={{ opacity: 0 }}
-            whileInView={{ y: [-50, 0], opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            {...reveal(0.2)}
           >
             <AvatarWrapper>
               <AvatarImg>
@@ -65,9 +62,7 @@ export const About = () => {
             </AvatarWrapper>
           </ImageContainer>
           <InfoContainer
-            initial={{ opacity: 0 }}
-            whileInView={{ y: [-50, 0], opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            {...reveal(0.2)}
           >
             <Paragraph>
               I'm a backend developer based in Argentina, building REST APIs
@@ -101,27 +96,24 @@ export const About = () => {
             </ButtonsWrapper>
           </InfoContainer>
         </ContentWrapper>
-        <SkillWrapper
-          initial={{ opacity: 0 }}
-          whileInView={{ y: [-50, 0], opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
+        <SkillGroups
+          {...reveal(0.4)}
         >
-          <Column>
-            {techStack?.slice(0, 6).map((skill) => (
-              <SkillItem key={skill.id} {...skill} />
-            ))}
-          </Column>
-          <Column>
-            {techStack?.slice(6, 11).map((skill) => (
-              <SkillItem key={skill.id} {...skill} />
-            ))}
-          </Column>
-          <Column>
-            {techStack?.slice(11, 16).map((skill) => (
-              <SkillItem key={skill.id} {...skill} />
-            ))}
-          </Column>
-        </SkillWrapper>
+          {techCategories.map((category) => {
+            const skills = techStack.filter(
+              (skill) => skill.category === category
+            );
+            const narrowCols =
+              skills.length <= 3 ? skills.length : Math.ceil(skills.length / 2);
+            return (
+              <GroupItems key={category} $cols={narrowCols}>
+                {skills.map((skill) => (
+                  <SkillItem key={skill.id} {...skill} />
+                ))}
+              </GroupItems>
+            );
+          })}
+        </SkillGroups>
       </Container>
     </Section>
   );

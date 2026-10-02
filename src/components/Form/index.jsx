@@ -4,6 +4,7 @@ import emailjs from "@emailjs/browser";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { motion } from "framer-motion";
+import { reveal } from "../../utils/animations";
 import {
   ErrorMsg,
   FormContact,
@@ -31,9 +32,7 @@ const InnerForm = (props) => {
   return (
     <FormContact ref={formRef} onSubmit={handleSubmit}>
       <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ y: [-50, 0], opacity: 1 }}
-        transition={{ duration: 0.5 }}
+        {...reveal()}
       >
         <InputsWrapper>
           <InputWrapper>

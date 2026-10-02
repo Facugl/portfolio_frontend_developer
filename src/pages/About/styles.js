@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { greenColor } from "../../globalStyles";
+import { primaryColor } from "../../globalStyles";
 import { motion } from "framer-motion";
 import { Button } from "../../common/Button";
 
@@ -39,7 +39,7 @@ export const AvatarWrapper = styled.div`
     content: "";
     position: absolute;
     inset: -10px 110px;
-    background: linear-gradient(315deg, #00ccff, #d400d4);
+    background: linear-gradient(315deg, ${primaryColor}, #9ED2FF);
     transition: 0.5s;
     animation: animate 4s linear infinite;
 
@@ -73,7 +73,7 @@ export const AvatarWrapper = styled.div`
     content: "";
     position: absolute;
     inset: 6px;
-    background: ${greenColor};
+    background: #16324f;
     border-radius: 50%;
     z-index: 1;
   }
@@ -238,42 +238,34 @@ export const ButtonDownloadCV = styled(Button)`
   }
 `;
 
-export const SkillWrapper = styled(motion.div)`
+export const SkillGroups = styled(motion.div)`
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   gap: 1rem;
   margin-top: 5rem;
 
   @media screen and (max-width: 768px) {
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-    justify-content: center;
     gap: 10px;
-    margin-top: 2rem;
-  }
-
-  @media screen and (max-width: 480px) {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
     margin-top: 3rem;
   }
 `;
 
-export const Column = styled.div`
+export const GroupItems = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1rem;
 
   @media screen and (max-width: 768px) {
-    display: contents;
+    gap: 10px;
+  }
+
+  @media screen and (max-width: 600px) {
+    max-width: calc(${({ $cols }) => $cols} * 104px + ${({ $cols }) => $cols - 1} * 10px);
+    margin: 0 auto;
   }
 
   @media screen and (max-width: 480px) {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    max-width: calc(${({ $cols }) => $cols} * 90px + ${({ $cols }) => $cols - 1} * 10px);
   }
 `;

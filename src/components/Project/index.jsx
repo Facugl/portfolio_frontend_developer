@@ -12,6 +12,7 @@ import {
   ButtonKnowMore,
   DemoNote,
 } from "./styles";
+import { reveal } from "../../utils/animations";
 
 export const Project = ({
   id,
@@ -28,9 +29,7 @@ export const Project = ({
     <ProjectContainer
       key={id}
       $position={position}
-      initial={{ opacity: 0 }}
-      whileInView={{ y: [-50, 0], opacity: 1 }}
-      transition={{ duration: 0.2 }}
+      {...reveal()}
     >
       <ProjectImage whileHover={{ scale: 1.1 }}>
         <img src={logoImgPath} alt={name} />

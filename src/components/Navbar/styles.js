@@ -6,7 +6,7 @@ export const Nav = styled.nav`
   background: ${({ hide }) => (hide ? "transparent" : darkColor)};
   height: 80px;
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
   align-items: center;
   font-size: 1.2rem;
   position: sticky;
@@ -16,6 +16,31 @@ export const Nav = styled.nav`
 
   @media screen and (max-width: 480px) {
     font-size: 0.9rem;
+  }
+`;
+
+export const NavBrand = styled(LinkScroll)`
+  margin-left: 2.5%;
+  padding: 0.5rem 0;
+  color: ${primaryColor};
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+
+  .short {
+    display: none;
+  }
+
+  @media screen and (max-width: 600px) {
+    .full {
+      display: none;
+    }
+
+    .short {
+      display: inline;
+    }
   }
 `;
 
@@ -64,5 +89,9 @@ export const NavLinks = styled(LinkScroll)`
   &:hover {
     color: ${grayColor};
     transition: all 0.3s ease;
+  }
+
+  @media screen and (max-width: 480px) {
+    padding: 0.5rem 0.6rem;
   }
 `;
